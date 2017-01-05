@@ -16,7 +16,7 @@ class interval:
 
     def validate_input(user_string):
         if type(user_string) is not str:
-            raise InvalidUserInputException("interval_input must be a string")
+            raise InvalidUserInputException("Interval_input must be a string")
 
     def __set_left_interval(self, user_input):
         if user_input[0] == "[":
@@ -118,6 +118,11 @@ def main():
 
     except InvalidIntervalException:
         print("Invalid interval(s). Please separate intervals by a comma followed by a space, as in '[1,2], [3,4]'")
+
+    except KeyboardInterrupt:
+        sys.exit(0)
+    except EOFError:
+        sys.exit(0)
 
 if __name__ == '__main__':
         main()
