@@ -98,7 +98,6 @@ def main():
         user_input = input("Please enter a list of intervals separated by ', ': ")
         if "quit" in user_input:
             sys.exit(0)
-        print(user_input)
         user_input_list = user_input.split(', ')
         interval_list = transform_string_list_to_intervals(user_input_list)
 
